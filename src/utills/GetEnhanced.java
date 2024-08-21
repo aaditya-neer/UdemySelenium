@@ -1,12 +1,14 @@
 package utills;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class WebBrowser {
-	public static WebDriver getDriver(String browser) {
+public class GetEnhanced {
+	public static WebDriver openUrl(String browser, String url) {
 		WebDriver driver;
 		browser = browser.toLowerCase();
 		switch(browser) {
@@ -22,7 +24,11 @@ public class WebBrowser {
 			System.setProperty("webdriver.chrome.driver", "D://Learning//Selenium//chromedriver//chromedriver.exe");
 			driver = new ChromeDriver();		
 		}
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		
 		return driver;
+		
 	}
-
 }
