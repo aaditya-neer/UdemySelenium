@@ -49,7 +49,7 @@ public class GreenKart {
 			}
 
 		}
-//		driver.quit();
+		driver.quit();
 	}
 
 }
