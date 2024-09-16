@@ -6,10 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class Alerts {
 
-	public static void main(String[] args) {
+	@Test
+	public void alertExample() {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "D://Learning//Selenium//chromedriver//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
