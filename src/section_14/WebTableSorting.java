@@ -7,16 +7,16 @@ import java.util.stream.Collectors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WebTableSorting {
 	@Test
 	public void sortWebTable() {
-		System.setProperty("webdriver.chromedriver.driver", "D://Learning//Selenium//chromedriver//chromedriver.exe");
+//		System.setProperty("webdriver.chromedriver.driver", "D://Learning//Selenium//chromedriver//chromedriver.exe");
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
 
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
 		driver.manage().window().maximize();
